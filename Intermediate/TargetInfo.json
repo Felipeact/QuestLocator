@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "QuestLocator",
+			"Path": "..\\Source\\QuestLocator.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "QuestLocatorEditor",
+			"Path": "..\\Source\\QuestLocatorEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
