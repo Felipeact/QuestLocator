@@ -17,6 +17,7 @@ ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputMappingContext_NoRegister();
 QUESTLOCATOR_API UClass* Z_Construct_UClass_AQuestLocatorCharacter();
 QUESTLOCATOR_API UClass* Z_Construct_UClass_AQuestLocatorCharacter_NoRegister();
+QUESTLOCATOR_API UClass* Z_Construct_UClass_UVLocatorComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_QuestLocator();
 // End Cross Module References
 
@@ -35,6 +36,12 @@ struct Z_Construct_UClass_AQuestLocatorCharacter_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "QuestLocatorCharacter.h" },
+		{ "ModuleRelativePath", "QuestLocatorCharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LocatorComponent_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Locator" },
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "QuestLocatorCharacter.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CameraBoom_MetaData[] = {
@@ -106,6 +113,7 @@ struct Z_Construct_UClass_AQuestLocatorCharacter_Statics
 #endif
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_LocatorComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraBoom;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FollowCamera;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DefaultMappingContext;
@@ -119,6 +127,7 @@ struct Z_Construct_UClass_AQuestLocatorCharacter_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AQuestLocatorCharacter_Statics::NewProp_LocatorComponent = { "LocatorComponent", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AQuestLocatorCharacter, LocatorComponent), Z_Construct_UClass_UVLocatorComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LocatorComponent_MetaData), NewProp_LocatorComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AQuestLocatorCharacter_Statics::NewProp_CameraBoom = { "CameraBoom", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AQuestLocatorCharacter, CameraBoom), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CameraBoom_MetaData), NewProp_CameraBoom_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AQuestLocatorCharacter_Statics::NewProp_FollowCamera = { "FollowCamera", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AQuestLocatorCharacter, FollowCamera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FollowCamera_MetaData), NewProp_FollowCamera_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AQuestLocatorCharacter_Statics::NewProp_DefaultMappingContext = { "DefaultMappingContext", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AQuestLocatorCharacter, DefaultMappingContext), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DefaultMappingContext_MetaData), NewProp_DefaultMappingContext_MetaData) };
@@ -126,6 +135,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AQuestLocatorC
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AQuestLocatorCharacter_Statics::NewProp_MoveAction = { "MoveAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AQuestLocatorCharacter, MoveAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveAction_MetaData), NewProp_MoveAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AQuestLocatorCharacter_Statics::NewProp_LookAction = { "LookAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AQuestLocatorCharacter, LookAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LookAction_MetaData), NewProp_LookAction_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AQuestLocatorCharacter_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AQuestLocatorCharacter_Statics::NewProp_LocatorComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AQuestLocatorCharacter_Statics::NewProp_CameraBoom,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AQuestLocatorCharacter_Statics::NewProp_FollowCamera,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AQuestLocatorCharacter_Statics::NewProp_DefaultMappingContext,
@@ -174,10 +184,10 @@ AQuestLocatorCharacter::~AQuestLocatorCharacter() {}
 struct Z_CompiledInDeferFile_FID_Users_felip_Documents_Unreal_Projects_QuestLocator_Source_QuestLocator_QuestLocatorCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AQuestLocatorCharacter, AQuestLocatorCharacter::StaticClass, TEXT("AQuestLocatorCharacter"), &Z_Registration_Info_UClass_AQuestLocatorCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AQuestLocatorCharacter), 665120662U) },
+		{ Z_Construct_UClass_AQuestLocatorCharacter, AQuestLocatorCharacter::StaticClass, TEXT("AQuestLocatorCharacter"), &Z_Registration_Info_UClass_AQuestLocatorCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AQuestLocatorCharacter), 1738212719U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_felip_Documents_Unreal_Projects_QuestLocator_Source_QuestLocator_QuestLocatorCharacter_h_2786494781(TEXT("/Script/QuestLocator"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_felip_Documents_Unreal_Projects_QuestLocator_Source_QuestLocator_QuestLocatorCharacter_h_3974225344(TEXT("/Script/QuestLocator"),
 	Z_CompiledInDeferFile_FID_Users_felip_Documents_Unreal_Projects_QuestLocator_Source_QuestLocator_QuestLocatorCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_felip_Documents_Unreal_Projects_QuestLocator_Source_QuestLocator_QuestLocatorCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

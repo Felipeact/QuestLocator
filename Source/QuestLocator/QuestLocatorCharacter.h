@@ -13,12 +13,17 @@ class UInputMappingContext;
 class UInputAction;
 struct FInputActionValue;
 
+class UVLocatorComponent;
+
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
 UCLASS(config=Game)
 class AQuestLocatorCharacter : public ACharacter
 {
 	GENERATED_BODY()
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Locator, meta = (AllowPrivateAccess = "true"))
+	UVLocatorComponent* LocatorComponent;
 
 	/** Camera boom positioning the camera behind the character */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))

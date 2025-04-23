@@ -11,6 +11,10 @@
     <None Include="..\..\Source\QuestLocatorEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\.vsconfig" />
+    <None Include="..\..\LICENSE.txt" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -52,6 +56,18 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\QuestLocator\QuestLocatorGameMode.h">
       <Filter>Source\QuestLocator</Filter>
+    </ClCompile>
+    <Filter Include="Source\QuestLocator\Private">
+      <UniqueIdentifier>{EC9CAFFF-AE7E-3FDB-9C44-E8F5DB9FF8BA}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\QuestLocator\Private\VLocatorComponent.cpp">
+      <Filter>Source\QuestLocator\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\QuestLocator\Public">
+      <UniqueIdentifier>{5F69811A-0244-32CC-8A7C-2A08AC606485}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\QuestLocator\Public\VLocatorComponent.h">
+      <Filter>Source\QuestLocator\Public</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
